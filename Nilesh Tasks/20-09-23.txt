@@ -1,0 +1,4 @@
+welcome to second day assignment.
+in which i have send a pull request to another remote person.
+and merged two files.
+
