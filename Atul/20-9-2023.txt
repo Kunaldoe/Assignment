@@ -1,0 +1,42 @@
+Git Squash
+Squashing commits in Git means combining multiple commits into a single commit. This is useful for creating a cleaner and more organized commit history, especially before merging a feature branch into the main branch.
+
+Merge Conflict
+A merge conflict in Git occurs when Git is unable to automatically merge changes from different branches. This typically happens when:
+
+1. Two branches have made changes to the same part of a file.
+2. One branch has deleted a file that the other branch modified.
+
+How to resolve?
+Resolving a merge conflict in Git involves manually editing the conflicting files to choose which changes to keep. Here are the steps to resolve a merge conflict:
+Identify the Conflicts:
+When you attempt to merge branches and a conflict occurs, Git will notify you about the conflicted files. You can use the git status command to see which files have conflicts.
+
+Open the Conflicted File:
+Open the conflicted file(s) in a text editor. Inside the file, Git marks the conflicting sections. It will look something like this:
+Resolve the Conflict:
+
+Manually edit the file to choose which changes to keep. You can keep one set of changes, incorporate both sets, or make entirely new changes.
+Remove Conflict Markers:
+
+Remove the conflict markers (<<<<<<< HEAD, =======, >>>>>>> branch_name) once you've resolved the conflict. The file should look clean and contain only the desired changes.
+Save the File:
+
+Save the file with the resolved changes.
+Add and Commit:
+
+After resolving all conflicts, stage the resolved files using git add <file>.
+Complete the Merge:
+
+Use git commit to complete the merge. Git will automatically generate a commit message indicating that a merge conflict was resolved.
+Finish the Merge:
+
+If you were in the middle of a merge operation when the conflict occurred, use git commit again to finalize the merge commit.
+Push (if necessary):
+
+If you were merging branches on a remote repository, you might need to push the changes to the remote repository using git push.
+Cleanup:
+
+Once the conflict is resolved and the merge is complete, you can delete any temporary branches created during the merge process (if applicable).
+Remember to communicate with your team members about the conflict resolution to ensure everyone is aware of the changes made. Additionally, always thoroughly test the merged code to ensure it works as expected.
+
